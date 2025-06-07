@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.controls button {
+  margin: 0 5px;
+}
+
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  background-color: #ffffff;
+}
+
+.all-day-row, .hour-row {
+  display: flex;
+}
+
+.time-col {
+  width: 80px;
+  text-align: right;
+  padding-right: 8px;
+  border-right: 1px solid #ccc;
+}
+
+.day-col {
+  flex: 1;
+  min-height: 40px;
+  border: 1px solid #ddd;
+  padding: 2px;
+  position: relative;
+}
+
+.day-col.today {
+  background: #f3faff;
+}
+
+.event {
+  background: lightgreen;
+  padding: 2px 5px;
+  margin: 1px 0;
+  font-size: 0.85em;
+  cursor: pointer;
+  position: relative;
+}
+
+.event.task {
+  background: #195957;
+}
+
+.event.holiday {
+  background: #a33737;
+}
+
+.event .del {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  display: none;
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 300px;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.week-header {
+  display: flex;
+  font-weight: bold;
+  background-color: #374151;
+  padding: 5px 0;
+}
+
+.time-col {
+  width: 100px;
+  text-align: center;
+}
+
+.day-col {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+.day-header {
+  font-size: 1rem;
+  display: block;
+}
+
+.day-name {
+  font-weight: bold;
+}
+
+.day-date {
+  font-size: 0.8rem;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  background-color: grey;
+}
